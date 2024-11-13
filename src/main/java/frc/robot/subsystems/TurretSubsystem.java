@@ -16,7 +16,7 @@ public class TurretSubsystem extends SubsystemBase {
     // Constructor
     public TurretSubsystem(int motorCANID, int joystickPort) {
         // Initialize the SPARK MAX with the correct CAN ID and motor type (Brushed for SIM motors)
-        turretMotor = new CANSparkMax(motorCANID, MotorType.kBrushed);
+        turretMotor = new CANSparkMax(motorCANID, MotorType.kBrushed);//brushed = no motor controller dedicated to motor
         joystick = new Joystick(joystickPort);
 
         // Restore motor controller to factory defaults
